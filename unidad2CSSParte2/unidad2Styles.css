@@ -1,0 +1,64 @@
+body{
+    height: 1080px;
+    width: 1920px;
+}
+h1{
+    background-color: white;
+}
+.ejercicios{
+    background-color: white;
+    border: 1px solid #000;
+}
+.cuadrado1{
+    background-color:red ;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    width: 200px;
+    border: 1px solid #000;
+}
+.cuadrado2{
+    background-color: blue;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    width: 200px;
+    border: 1px solid #000;
+}
+.cuadrado3{
+    background-color: green;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    width: 200px;
+    border: 1px solid #000;
+}
+.ejercicio1{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    border: 1px solid #000;
+}
+.ejercicio2{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    border: 1px solid #000;
+    padding-left: 0%;
+    padding-right: 0;
+}
+.ejercicio3{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid #000;
+    padding-left: 0%;
+    padding-right: 0;
+}
