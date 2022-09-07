@@ -5,6 +5,7 @@ body,html{
 img{
 height: 60%;
 width:  60%; 
+box-shadow: 3px 0 10px #ccc;
 }
 h1{
     font-size: 4rem;
@@ -28,6 +29,8 @@ h4{
 }
 p{
     font-size: 1rem;
+    column-count: 2;
+    column-gap: 20PX;
     padding: 0px;
     margin: 0px;
 }
@@ -73,6 +76,8 @@ li{
     background-color: lightslategray;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
 }
 footer{
     background-color: grey;
