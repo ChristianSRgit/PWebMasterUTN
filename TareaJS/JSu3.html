@@ -10,7 +10,7 @@
     <h1>Unidad 3: "JavaScript (parte 1)</h1>
     <h2>Las respuestas al input estan en consola</h2>
     <script>
-        let num = prompt("Que distancia en metros vas a recorrer? Te recomiendo el transporte adecuado ;)") ;
+        let num = parseInt(prompt("Que distancia en metros vas a recorrer? Te recomiendo el transporte adecuado ;)")) ;
         if(num > 0 && num <= 1000){
             console.log("el medio de transporte apropiado es A PIE")
         }
@@ -26,9 +26,17 @@
         if(num > 100000){
             console.log("el medio de transporte apropiado es en AVIÓN")
         }
-        //no anide los ifs ya que lo considero innecesario, mi intencion era utilizar un switch pero me econtre con limitaciones en los case que no pude solventar al 
-        // intentar agregarles condicionales
+        console.log("si llamas a la funcion maxValueArray y como parametro le das un array, te devuelve el valor maximo")
+        //no anide los ifs ya que lo considero innecesario, mi intencion era utilizar un switch pero me econtre con limitaciones en los case que no pude solventar al intentar agregarles condicionales
     </script>
+    <script>
+        //funcion array
+        let array = []
+        function maxValueArray(array){
+            console.log(Math.max(...array));
+        }
+    </script>
+
 </body>
 </html>
 <!-- Crear una función que dada una distancia determine el medio de transporte apropiado de acuerdo a las siguientes reglas:
