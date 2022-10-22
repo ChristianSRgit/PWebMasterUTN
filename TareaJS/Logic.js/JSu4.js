@@ -11,12 +11,19 @@ blue.addEventListener("click",bodyBlue);
 
 function bodyRed(){
     body.classList.toggle("colorRed")
+    body.classList.remove("colorGreen")
+    body.classList.remove("colorBlue")
+
 }
 
 function bodyGreen(){
     body.classList.toggle("colorGreen")
+    body.classList.remove("colorRed")
+    body.classList.remove("colorBlue")
 }
 
 function bodyBlue(){
     body.classList.toggle("colorBlue")
+    body.classList.remove("colorGreen")
+    body.classList.remove("colorRed")
 }
