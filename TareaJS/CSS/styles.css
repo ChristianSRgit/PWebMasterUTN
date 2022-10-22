@@ -51,6 +51,9 @@ textarea{
     cursor: pointer;
 }
 
+.colorRed{
+    background-color: red;
+}
 .green{
     background-color: green;
     cursor: pointer;
