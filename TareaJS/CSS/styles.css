@@ -54,10 +54,15 @@ textarea{
 .colorRed{
     background-color: red;
 }
+
 .green{
     background-color: green;
     cursor: pointer;
 
+}
+
+.colorGreen{
+    background-color: green;
 }
 
 .blue{    
@@ -66,4 +71,6 @@ textarea{
 
 }
 
-
+.colorBlue{
+    background-color: blue;
+}
