@@ -1,0 +1,22 @@
+{
+  "name": "1st",
+  "version": "1.0.0",
+  "description": "primer json test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChristianSRgit/PWebMasterUTN.git"
+  },
+  "author": "CSR",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChristianSRgit/PWebMasterUTN/issues"
+  },
+  "homepage": "https://github.com/ChristianSRgit/PWebMasterUTN#readme",
+  "dependencies": {
+    "moment": "^2.29.4"
+  }
+}
