@@ -6,6 +6,9 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var serviciosRouter = require('./routes/servicios');
+var contactoRouter = require('./routes/contacto');
+var faqRouter = require('./routes/faq');
 
 var app = express();
 
@@ -21,13 +24,16 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/servicios',serviciosRouter);
+app.use('/contactoRouter',contactoRouter);
+app.use('/faq',faqRouter);
 
 app.get('/prueba', function(req,res){
   res.send('soy la pag de PRUEBA')
 })
 
-app.get('/consultas', function(req,res){
-  res.render('consultas');
+app.get('/servicios', function(req,res){
+  res.render('servicios');
 })
 
 app.get('/faq', function(req,res){
