@@ -22,6 +22,22 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
+app.get('/prueba', function(req,res){
+  res.send('soy la pag de PRUEBA')
+})
+
+app.get('/consultas', function(req,res){
+  res.render('consultas');
+})
+
+app.get('/faq', function(req,res){
+  res.render('faq');
+})
+
+app.get('/contacto', function(req,res){
+  res.render('contacto');
+})
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
