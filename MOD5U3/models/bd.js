@@ -9,10 +9,7 @@ var pool = mysql.createPool({
     database: process.env.MYSQL_DB_NAME
 });
 
-MYSQL_HOST=localhost
-MYSQL_USER=root
-MYSQL_PASSWORD=
-MYSQL_DB_NAME=modulo5
+
 
 
 pool.query = util.promisify(pool.query);
