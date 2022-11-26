@@ -29,7 +29,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 
-//selectt
+//select
 pool.query('select * from empleados').then(function 
   (resultados){
     console.log(resultados)
