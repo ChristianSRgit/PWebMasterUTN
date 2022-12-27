@@ -51,5 +51,9 @@ router.post('/agregar', async (req, res, next) => {
     }
 })
 
+//listar novedad por ID para modificar
+
+ router.get('/mod')
+
 
 module.exports = router;
