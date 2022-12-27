@@ -1,8 +1,9 @@
 <h2>Novedades</h2>
+    {{#each novedades}}
         <div class="novedades">
-            <h3>Titulo</h3>
-            <h4>Subtitulo</h4>
-            <p>Descripcion - Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis, consectetur officia
-                numquam, maiores architecto explicabo iure quo amet modi excepturi, voluptates repudiandae hic nesciunt
-                quis voluptate eligendi quidem ex commodi.</p>
+            <h3>{{titulo}}</h3>
+            <h4>{{subtitulo}}</h4>
+            <p>{{cuerpo}}</p>
+        <hr>
         </div>
+    {{/each}}
