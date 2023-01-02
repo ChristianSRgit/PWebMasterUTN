@@ -244,12 +244,13 @@ footer {
 
 }
 
-.formulario input[type="text"] {
+.formulario input[type="text"],input[type=number]{
     width: 350px;
     border: 1px solid grey;
     border-radius: 1%;
     background-color: #9ca0a1;
 }
+
 
 .formulario input[type="submit"] {
     background: #6da9ed;
@@ -265,4 +266,10 @@ footer {
 
 .formulario input[type="submit"]:hover {
     background-color: #2e64a1;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

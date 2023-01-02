@@ -2,14 +2,25 @@ var express = require('express');
 var router = express.Router();
 var novedadesModel = require('../../models/novedadesModel');
 
+
+//listar novedades
 router.get('/', async function(req,res,next){
 
-    var novedades = await novedadesModel.getNovedades();
+    //var novedades = await novedadesModel.getNovedades();
+    var novedades;
+    if(req.query.q == undefined){
+        novedades = await novedadesModel.getNovedades();
+    }else {
+        novedades = novedades = await novedadesModel.buscarNovedades(req.query.q);
+    }
+
 
     res.render('admin/novedades', {
         layout: 'admin/layout',
         usuario: req.session.nombre,
-        novedades
+        novedades,
+        is_search: req.query.q !== undefined,
+        q: req.query.q
     });
 });
 
@@ -53,7 +64,44 @@ router.post('/agregar', async (req, res, next) => {
 
 //listar novedad por ID para modificar
 
- router.get('/mod')
+ router.get('/modificar/:id', async (req, res, next) => {
+    var id = req.params.id;
+
+    console.log(req.params.id);
+
+    var novedad = await novedadesModel.getNovedadesById(id);
+
+    res.render('admin/modificar', {
+        layout:'admin/layout',
+        novedad
+    })
+
+ })
+
+ //modificacion
+ router.post('/modificar', async (req, res, next) => {
+    try {
+        console.log(req.body);
+
+        var obj = {
+            titulo: req.body.titulo,
+            subtitulo: req.body.subtitulo,
+            cuerpo: req.body.cuerpo
+        }
+
+        console.log(obj)
+
+        await novedadesModel.modificarNovedadById(obj, req.body.id);
+        res.redirect('/admin/novedades');
+    } catch (error){
+        console.log(error)
+        res.render('admin/modificar', {
+            layout: 'admin/layout',
+            error: true,
+            message: 'No se modifico la novedad'
+        })
+    }
+ })
 
 
 module.exports = router;

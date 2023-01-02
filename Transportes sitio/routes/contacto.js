@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var nodemailer = require('nodemailer');
+var contactoModel = require('./../models/contactoModel');
 
 
 /* GET home page. */
@@ -33,7 +34,8 @@ router.post('/',async (req,res,next) => {
     }
   }) // cierro transporter
 
-  var info = await transporter.sendMail(obj);
+  var info = await transporter.sendMail(obj); //envio mail
+  var contacto = await contactoModel.insertContacto(req.body)//guarda contacto en BBDD
 
   res.render('contacto',{
     isContacto: true,

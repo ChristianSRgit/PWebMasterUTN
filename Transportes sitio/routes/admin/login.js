@@ -9,10 +9,12 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/logout',function(req, res, next){
+    console.log(req.session)
     req.session.destroy();
-    req.render('admin/login', {
-        layout: 'admin/layout'
-    });
+    res.redirect('/admin/login');
+    console.log(req.session)
+
+
 });
 
 router.post('/',async (req, res, next) => {
